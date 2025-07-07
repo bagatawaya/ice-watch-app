@@ -1,3 +1,4 @@
+// vite.config.ts
 import path from 'path';
 import { defineConfig, loadEnv } from 'vite';
 
@@ -12,6 +13,11 @@ export default defineConfig(({ mode }) => {
         alias: {
           '@': path.resolve(__dirname, '.'),
         }
+      },
+      // This block ensures the 'public' directory (containing locales) is copied during the build
+      publicDir: 'public',
+      build: {
+        outDir: 'dist',
       }
     };
 });
