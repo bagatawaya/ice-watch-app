@@ -1,11 +1,17 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import path from 'path';
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  publicDir: 'public', // Explicitly tell Vite where the public directory is
+  publicDir: 'public',
   build: {
-    outDir: 'dist', // The standard output directory
-  }
-})
+    outDir: 'dist',
+  },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'), // This line is the fix
+    },
+  },
+});
