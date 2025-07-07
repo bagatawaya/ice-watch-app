@@ -1,17 +1,11 @@
-import path from 'path';
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  publicDir: 'public',
+  publicDir: 'public',   // ensures /locales & index.css end up in dist
   build: {
     outDir: 'dist',
   },
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, './src'), // This line is the fix
-    },
-  },
-});
+  base: '/', // ensures correct asset paths post-deploy
+})
