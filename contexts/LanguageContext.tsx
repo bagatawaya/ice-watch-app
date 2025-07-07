@@ -1,4 +1,3 @@
-
 import React, { createContext, useState, useContext, useEffect } from 'react';
 import { useLocalStorage } from '../hooks/useLocalStorage';
 
@@ -30,8 +29,9 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
         const fetchTranslations = async () => {
             try {
                 const [enResponse, esResponse] = await Promise.all([
-                    fetch('./locales/en.json'),
-                    fetch('./locales/es.json'),
+                    // UPDATED: Changed './locales/' to './locals/' to match file path
+                    fetch('./locals/en.json'),
+                    fetch('./locals/es.json'),
                 ]);
 
                 if (!enResponse.ok || !esResponse.ok) {
