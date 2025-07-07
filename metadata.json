@@ -1,0 +1,10 @@
+{
+  "name": "Copy of IceWatch Justo-0607-Back",
+  "description": "A community-driven application to report and view sightings of ICE agents, helping to keep community members informed and safe. Users can register, report sightings with a photo and location, and view a live feed of reports from others.",
+  "prompt": "",
+  "requestFramePermissions": [
+    "geolocation",
+    "camera",
+    "microphone"
+  ]
+}

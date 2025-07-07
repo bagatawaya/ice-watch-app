@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://vigilaice.com/" />
+    <meta property="og:title" content="Watch ICE / Vigila ICE" />
+    <meta property="og:description" content="A community-driven application to report and view sightings of ICE agents, helping to keep community members informed and safe." />
+    <meta property="og:image" content="https://vigilaice.com/og-image.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://vigilaice.com/" />
+    <meta property="twitter:title" content="Watch ICE / Vigila ICE" />
+    <meta property="twitter:description" content="A community-driven application to report and view sightings of ICE agents, helping to keep community members informed and safe." />
+    <meta property="twitter:image" content="https://vigilaice.com/og-image.png" />
+
+    <title>Watch ICE / Vigila ICE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'brand-bg': '#111827',
+              'brand-surface': '#1F2937',
+              'brand-primary': '#374151',
+              'brand-secondary': '#6B7280',
+              'brand-accent': '#3B82F6',
+              'brand-accent-hover': '#2563EB',
+              'brand-text': '#F9FAFB',
+              'brand-text-secondary': '#9CA3AF',
+              'brand-danger': '#EF4444',
+              'brand-danger-hover': '#DC2626',
+            },
+             animation: {
+              'fade-in': 'fadeIn 0.5s ease-in-out',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+            }
+          },
+        },
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^18.2.0",
+    "react/": "https://esm.sh/react@^18.2.0/",
+    "react-dom": "https://esm.sh/react-dom@^18.2.0",
+    "react-dom/": "https://esm.sh/react-dom@^18.2.0/",
+    "date-fns": "https://esm.sh/date-fns@^3.0.0",
+    "date-fns/": "https://esm.sh/date-fns@^3.0.0/",
+    "date-fns/locale/": "https://esm.sh/date-fns@3.6.0/locale/",
+    "@google/genai": "https://esm.sh/@google/genai",
+    "@react-google-maps/api": "https://esm.sh/@react-google-maps/api@2.19.3?external=react,react-dom",
+    "markdown-it": "https://esm.sh/markdown-it@14.1.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-brand-bg text-brand-text">
+    <div id="root"></div>
+    <script type="module" src="./index.tsx"></script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
