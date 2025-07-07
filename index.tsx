@@ -8,7 +8,6 @@ import { LanguageProvider } from './contexts/LanguageContext';
 document.addEventListener('DOMContentLoaded', () => {
   const rootElement = document.getElementById('root');
   if (!rootElement) {
-    // This should not happen with the DOMContentLoaded listener, but it's a good safeguard.
     console.error("Could not find root element to mount to. The #root div is missing from index.html.");
     return;
   }
